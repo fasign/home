@@ -3,10 +3,15 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
-console.log(process.env.BASE_URL)
+console.log('process.env.BASE_URL', process.env.BASE_URL)
 const routes = [
   {
     path: '/',
+    name: 'home',
+    component: Home
+  },
+  {
+    path: '/home',
     name: 'home',
     component: Home
   },

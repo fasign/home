@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-     {{ (function(){debugger;})() || openTest}}
   </div>
 </template>
 
