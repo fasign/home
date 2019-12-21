@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    这里是猪猪菜的猪窝
+    咦...这里是猪猪菜的猪窝
   </div>
 </template>
 
