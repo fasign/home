@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+<script>
+  const START = '2019/02/14 9:00:00'
+  let start = new Date(START).getTime()
+  function timer() {
+    let now = new Date().getTime()
+    let gap = now - start
+    gap = parseInt(gap / 1000)
+    let time = `${parseInt(gap / (24 * 3600))}天`
+    gap = gap % (24 * 3600)
+    time += `${parseInt(gap / 3600)}小时`
+    gap = gap % 3600
+    time += `${parseInt(gap / 60)}分`
+    gap = gap % 60
+    time += `${gap}秒`
+    document.querySelector('#app').innerText = time
+  }
+  timer()
+  setInterval(timer, 1000)
+</script>
+</html>
